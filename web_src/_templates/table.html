@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="{{ config.language }}">
+
+{%- macro make_nav_link(name, id, page, site) %}
+  {% set aria = "" %}
+  {% set class = "nav-link" %}
+  {% if page.id == id %}
+    {% set class = class + " active" %}
+    {% set aria = 'aria-current="page"' %}
+  {% endif %}
+  <a class="{{ class }}" {{ aria }} href="{{ site[id].path|replace('index.html', '/DimechetAl_TLERTdb') }}">{{ name }}</a>
+{%- endmacro %}
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {%- if page.custom_page_title is defined %}
+    {%- set title = page.custom_page_title|striptags|e %}
+  {%- else %}
+    {%- set title = page.title|striptags|e + " | " + config.site_name|striptags|e %}
+  {%- endif %}
+  <title>{{ title }}</title>
+
+  {%- if config.favicon is defined %}
+  <link rel="shortcut icon" href="{{ config.favicon|e }}"/>
+  {%- endif %}
+
+
+
+<script src="js/papaparse.min.js"></script>
+
+<!-- 
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/extensions/export/bootstrap-table-export.min.js"></script>
+ -->
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://unpkg.com/browse/jquery@3.6.0/dist/jquery.min.js"></script>
+ 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+ -->
+ 
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.jqueryui.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.jqueryui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href=" https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.jqueryui.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.jqueryui.min.css"/>
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap-5.1/bootstrap.min.css">
+  <!-- FontAwsome icons -->
+  <link rel="stylesheet" href="css/fontawesome/css/all.css">
+  <!-- Main CSS stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/spinner.css">
+  
+  {%- block extrahead %}{% endblock %}
+
+<style>
+  
+  /* style for the data table */
+
+  #result-table {
+    position: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+   }
+
+  .search {
+    width: 50%;
+    position: relative;
+  }
+
+  .search span {
+    position: relative; /*Set search icon*/
+    right: 50px;
+    top: 50px;
+  }
+  .search input[type=text]{
+    border-color: red; /*Set the border color for search box*/
+  }
+
+  .search input[type=text]:focus{
+   outline:none;
+   box-shadow:none; /*If you dont need the shadow on click*/
+  }
+
+  .fixed-table-toolbar .bs-bars,
+  .fixed-table-toolbar .search,
+  .fixed-table-toolbar .columns {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    line-height: 34px;
+  }
+
+.list-group-item {
+    border:0 !important;
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+}
+	
+</style>
+
+
+
+</head>
+
+<body>
+  <header class="shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-labelledby="primary-navigation">
+      <div class="container align-middle">
+        <a class="navbar-brand" href="/DimechetAl_TLERTdb">
+          <img aria-hidden="true" alt="Project logo" src="{{ config.logo }}">
+          {{ config.site_name }}
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse align-middle"  id="navbarNav">
+          <ul class="navbar-nav flex-row flex-wrap">
+            {%- for name, id in config.menu %}
+              <li class="nav-item col-6 col-md-auto">
+                {{ make_nav_link(name, id, page, site) }}
+              </li>
+            {%- endfor %}
+          </ul>
+          <ul class="navbar-nav ms-md-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-label="GitHub" href="https://github.com/{{ config.repository }}" target="_blank"><i class="fab fa-github fa-lg me-1" title="GitHub" aria-hidden="true"></i> GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {%- block content %}
+      <section class="container page-content">
+        {%- if page.exclude_h1 is defined and page.exclude_h1 %}
+        {%- else %}
+          <h1>{{ page.title }}</h1>
+        {%- endif %}
+        {{ page.body }}
+      </section>
+    {%- endblock %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Last updated {{ build.today.strftime('%Y/%m/%d') }} from commit
+        <a href="https://github.com/{{ config.repository }}/commit/{{ build.commit }}"><code>{{ build.commit }}</code></a>
+      </p>
+      <p>
+        Built with <a href="https://nene.leouieda.com">Nēnē</a> {{ build.nene_version }}
+      </p>
+      <p>
+        Copyright &copy; 2021 {{ config.author }}
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundled Javascript (with their dependencies) -->
+  <script src="/js/bootstrap-5.1/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
