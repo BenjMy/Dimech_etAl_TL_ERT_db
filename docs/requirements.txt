@@ -3,4 +3,5 @@ numpydoc
 pandas
 qgrid
 ipywidgets
-ipyleaflet 
+ipyleaflet
+sphinx_gallery
