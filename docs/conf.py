@@ -7,8 +7,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'DimechetAl_TLERTdb'
-copyright = '2020, Benjamin Mary'
-author = 'B. Mary'
+copyright = '2021, B. Mary, A. Dimech'
+author = 'B. Mary, A. Dimech'
 # The short X.Y version
 version = '0.1.1'
 # The full version, including alpha/beta/rc tags
@@ -46,21 +46,12 @@ autodoc_default_flags = ['members', 'inherited-members']
 
 sphinx_gallery_conf = {
     # path to your examples scripts
-    'examples_dirs': ['notebooks'],
+    'examples_dirs': ['../notebooks'],
     # path where to save gallery generated examples
     'gallery_dirs': 'auto_examples',
     'filename_pattern': '\.ipynb',
     # Remove the "Download all examples" button from the top level gallery
     'download_all_examples': False,
-    # Sort gallery example by file name instead of number of lines (default)
-    # 'within_subsection_order': FileNameSortKey,
-    # directory where function granular galleries are stored
-    # 'backreferences_dir': False,
-    # Modules for which function level galleries are created.  In
-    # this case sphinx_gallery and numpy in a tuple of strings.
-    # 'doc_module': 'harmonica',
-    # Insert links to documentation of objects in the examples
-    # 'reference_url': {'harmonica': None},
 }
 
 # Configure the inline plots from matplotlib plot_directive
@@ -129,7 +120,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pyCATHYdoc'
+htmlhelp_basename = 'ERTdb'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -157,7 +148,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'ERTdb.tex', 'ERTdb Documentation',
-     'Benjamin Mary', 'manual'),
+     'B. Mary, A. Dimech', 'manual'),
 ]
 
 

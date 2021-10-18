@@ -1,4 +1,0 @@
-- pandas
-- qgrid
-- ipywidgets
-- ipyleaflet
