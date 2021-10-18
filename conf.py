@@ -1,10 +1,3 @@
-import sys
-import os
-import datetime
-# import sphinx_rtd_theme
-# import sphinx_gallery
-# from sphinx_gallery.sorting import FileNameSortKey
-
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -81,8 +74,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
