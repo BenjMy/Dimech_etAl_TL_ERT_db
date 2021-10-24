@@ -44,15 +44,6 @@ extensions = [
 autosummary_generate = True
 autodoc_default_flags = ['members', 'inherited-members']
 
-sphinx_gallery_conf = {
-    # path to your examples scripts
-    'examples_dirs': ['/notebooks'],
-    # path where to save gallery generated examples
-    'gallery_dirs': 'auto_examples',
-    'filename_pattern': '\.ipynb',
-    # Remove the "Download all examples" button from the top level gallery
-    'download_all_examples': False,
-}
 
 # Configure the inline plots from matplotlib plot_directive
 plot_formats = [("png", 90)]
