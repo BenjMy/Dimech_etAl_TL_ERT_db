@@ -29,6 +29,7 @@ release = '0.1.1'
 extensions = [
     'nbsphinx', # to include jupyter notebook as sphinx doc page
     'sphinx.ext.mathjax',
+   'jupyter_sphinx.execute'
 ]
 
 
