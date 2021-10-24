@@ -17,6 +17,7 @@ Contents
    intro
    map
    table
-   
+   myplot1_plotly
+   myplot2_mpl
 
 
