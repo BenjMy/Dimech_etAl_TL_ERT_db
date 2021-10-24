@@ -27,16 +27,7 @@ release = '0.1.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.napoleon',
-    'numpydoc',
     'nbsphinx', # to include jupyter notebook as sphinx doc page
-    'sphinx_gallery.gen_gallery', # to generate the gallery
-    #'sphinx_nbexamples', # needs pandoc (apt-get install pandoc)
-    'sphinx.ext.autosectionlabel',
-    'sphinx.ext.viewcode'
 ]
 
 
@@ -51,7 +42,7 @@ plot_html_show_formats = False
 plot_html_show_source_link = False
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+# templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
