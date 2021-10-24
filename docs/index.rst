@@ -12,5 +12,5 @@ Contents
 
 .. toctree::
 
-   map
+   notebooks/dbpd.ipynb
    notebooks/map.ipynb
