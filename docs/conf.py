@@ -46,7 +46,7 @@ autodoc_default_flags = ['members', 'inherited-members']
 
 sphinx_gallery_conf = {
     # path to your examples scripts
-    'examples_dirs': ['../notebooks'],
+    'examples_dirs': ['/notebooks'],
     # path where to save gallery generated examples
     'gallery_dirs': 'auto_examples',
     'filename_pattern': '\.ipynb',
