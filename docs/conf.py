@@ -32,7 +32,7 @@ extensions = [
     'sphinx.ext.autosectionlabel'
 ]
 
-nbsphinx_execute = 'never'
+nbsphinx_execute = 'auto'
 #nbsphinx_kernel_name = 'Dimech'
 nbsphinx_allow_errors = True
 
