@@ -77,8 +77,8 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_logo = 'img/logo.png'
-html_theme = 'sphinx_rtd_theme'
+# html_logo = 'img/logo.png'
+# html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -101,23 +101,23 @@ html_theme = 'sphinx_rtd_theme'
 #
 # html_sidebars = {}
 
-# import guzzle_sphinx_theme
+import guzzle_sphinx_theme
 
-# html_favicon = 'img/logo.png'
-# html_title = project + ' version ' + release
-# html_theme_path = guzzle_sphinx_theme.html_theme_path()
-# html_theme = 'guzzle_sphinx_theme'
+html_favicon = 'img/logo.png'
+html_title = project + ' version ' + release
+html_theme_path = guzzle_sphinx_theme.html_theme_path()
+html_theme = 'guzzle_sphinx_theme'
 
-# html_theme_options = {
-#     'navigation_with_keys': True,
-#     'project_nav_name': project,
-#     'base_url': 'https://nbsphinx.readthedocs.io/en/guzzle-theme/',
-#     'globaltoc_depth': 3,
-#     #'globaltoc_collapse': False,
-# }
-# html_sidebars = {
-#     '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']
-# }
+html_theme_options = {
+    'navigation_with_keys': True,
+    'project_nav_name': project,
+    'base_url': 'https://nbsphinx.readthedocs.io/en/guzzle-theme/',
+    'globaltoc_depth': 3,
+    #'globaltoc_collapse': False,
+}
+html_sidebars = {
+    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']
+}
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
