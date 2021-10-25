@@ -30,7 +30,8 @@ import guzzle_sphinx_theme
 extensions = [
     'nbsphinx', # to include jupyter notebook as sphinx doc page
     'sphinx.ext.mathjax',
-   'jupyter_sphinx.execute'
+    'jupyter_sphinx.execute'
+    'sphinx.ext.autosectionlabel'
 ]
 
 nbsphinx_execute = 'always'
@@ -102,6 +103,7 @@ html_theme = 'sphinx_rtd_theme'
 #
 # html_sidebars = {}
 
+
 html_favicon = 'favicon.svg'
 html_title = project + ' version ' + release
 html_theme_path = guzzle_sphinx_theme.html_theme_path()
@@ -109,7 +111,6 @@ html_theme = 'guzzle_sphinx_theme'
 
 html_theme_options = {
     'navigation_with_keys': True,
-
     'project_nav_name': project,
     'base_url': 'https://nbsphinx.readthedocs.io/en/guzzle-theme/',
     'globaltoc_depth': 3,
