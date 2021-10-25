@@ -30,7 +30,7 @@ import guzzle_sphinx_theme
 extensions = [
     'nbsphinx', # to include jupyter notebook as sphinx doc page
     'sphinx.ext.mathjax',
-    'jupyter_sphinx.execute'
+    'jupyter_sphinx.executesphinx',
     'sphinx.ext.autosectionlabel'
 ]
 
@@ -79,7 +79,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_logo = 'images/logo.png'
+html_logo = 'img/logo.png'
 html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
