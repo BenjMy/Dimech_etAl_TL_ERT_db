@@ -21,7 +21,6 @@ release = '0.1.1'
 #
 # needs_sphinx = '1.0'
 
-import guzzle_sphinx_theme
 
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -102,6 +101,7 @@ html_theme = 'sphinx_rtd_theme'
 #
 # html_sidebars = {}
 
+# import guzzle_sphinx_theme
 
 # html_favicon = 'img/logo.png'
 # html_title = project + ' version ' + release
