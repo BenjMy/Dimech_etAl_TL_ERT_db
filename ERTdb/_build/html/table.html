@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sum up table &#8212; My sample book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="My plot 2 with matplolib" href="myplot2_mpl.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="map.html">
+   My Map
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="myplot1_plotly.html">
+   My plot 1 with plotly
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="myplot2_mpl.html">
+   My plot 2 with matplolib
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sum up table
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/table.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftable.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/table.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="sum-up-table">
+<h1>Sum up table<a class="headerlink" href="#sum-up-table" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p><strong>NOTE</strong></p>
+<p>It works with almost all markdown flavours (the below blank line matters).</p>
+<hr class="docutils" />
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Journal</th>
+      <th>Year</th>
+      <th>Cited</th>
+      <th>Last Updated</th>
+      <th>Type of survey</th>
+      <th>Field of application</th>
+      <th>Site name</th>
+      <th>Country</th>
+      <th>Duration (days)</th>
+      <th># snapshots</th>
+      <th>Frequency (snapshot/day)</th>
+      <th>ERT layout</th>
+      <th>Buried</th>
+      <th>Surface (m)</th>
+      <th>Electrode spacing (m)</th>
+      <th>Config Elec</th>
+      <th>Nb Elec</th>
+      <th>Resistivimeter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bevcs et al. (1991)</td>
+      <td>Borehole-to-surface electrical resistivity mon...</td>
+      <td>Geophysics</td>
+      <td>1991</td>
+      <td>156</td>
+      <td>5/26/2021</td>
+      <td>NaN</td>
+      <td>Contaminant monitoring</td>
+      <td>NaN</td>
+      <td>USA</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Daily et al. (1992)</td>
+      <td>Electrical resistivity tomography of vadose wa...</td>
+      <td>Water Resources Research</td>
+      <td>1992</td>
+      <td>629</td>
+      <td>6/8/2021</td>
+      <td>Semi-permanent study</td>
+      <td>Hydrogeology</td>
+      <td>NaN</td>
+      <td>USA</td>
+      <td>72.0</td>
+      <td>15.0</td>
+      <td>5</td>
+      <td>2D borehole</td>
+      <td>Yes</td>
+      <td>20 m x 12 m</td>
+      <td>6</td>
+      <td>4 boreholes x 8 elec</td>
+      <td>32.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kalinski et al. (1993)</td>
+      <td>Electrical resistivity measurements to estimat...</td>
+      <td>Journal of Applied Geophysics</td>
+      <td>1993</td>
+      <td>63</td>
+      <td>6/8/2021</td>
+      <td>NaN</td>
+      <td>Hydrogeology</td>
+      <td>NaN</td>
+      <td>USA</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ramirez et al. (1993)</td>
+      <td>Monitoring an underground steam injection proc...</td>
+      <td>Water Resources Research</td>
+      <td>1993</td>
+      <td>218</td>
+      <td>5/26/2021</td>
+      <td>NaN</td>
+      <td>Contaminant monitoring</td>
+      <td>NaN</td>
+      <td>USA</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>White (1994)</td>
+      <td>Electrode arrays for measuring groundwater flo...</td>
+      <td>Geophysics</td>
+      <td>1994</td>
+      <td>98</td>
+      <td>6/8/2021</td>
+      <td>NaN</td>
+      <td>Hydrogeology</td>
+      <td>NaN</td>
+      <td>Nouvelle-Zeleand</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>669</th>
+      <td>Tso et al. (2020)</td>
+      <td>Integrated hydrogeophysical modelling and data...</td>
+      <td>Journal of Contaminant Hydrology</td>
+      <td>2020</td>
+      <td>2</td>
+      <td>5/26/2021</td>
+      <td>Semi-permanent synthetic/suggested</td>
+      <td>Contaminant monitoring</td>
+      <td>Hatfield</td>
+      <td>UK</td>
+      <td>40.0</td>
+      <td>40.0</td>
+      <td>1</td>
+      <td>3D borehole</td>
+      <td>Yes</td>
+      <td>10 x 6 x 6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>ALERT</td>
+    </tr>
+    <tr>
+      <th>670</th>
+      <td>Vanella et al. (2020)</td>
+      <td>Electrical resistivity imaging for monitoring ...</td>
+      <td>Irrigation Science</td>
+      <td>2020</td>
+      <td>3</td>
+      <td>6/8/2021</td>
+      <td>Semi-permanent study</td>
+      <td>Vegetation</td>
+      <td>NaN</td>
+      <td>Italy</td>
+      <td>90.0</td>
+      <td>21.0</td>
+      <td>4</td>
+      <td>2D surface</td>
+      <td>No</td>
+      <td>11</td>
+      <td>0.15</td>
+      <td>2 lines of 72 elec each</td>
+      <td>144.0</td>
+      <td>Syscal</td>
+    </tr>
+    <tr>
+      <th>671</th>
+      <td>Vann et al. (2020)</td>
+      <td>Delineation of seawater intrusion using geo-el...</td>
+      <td>Water (Switzerland)</td>
+      <td>2020</td>
+      <td>13</td>
+      <td>5/28/2021</td>
+      <td>Regular measurements</td>
+      <td>Saline intrusion</td>
+      <td>NaN</td>
+      <td>Thailande</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>672</th>
+      <td>Vargas et al. (2020)</td>
+      <td>Soil electrical resistivity monitoring as a pr...</td>
+      <td>Irrigation Science</td>
+      <td>2020</td>
+      <td>0</td>
+      <td>6/8/2021</td>
+      <td>Artificial conditions</td>
+      <td>Vegetation</td>
+      <td>NaN</td>
+      <td>Chili</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>#DIV/0!</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>673</th>
+      <td>Zhou et al. (2020)</td>
+      <td>Dynamic Processes of CO2 Storage in the Field:...</td>
+      <td>Water Resources Research</td>
+      <td>2020</td>
+      <td>5</td>
+      <td>6/8/2021</td>
+      <td>Semi-permanent study</td>
+      <td>Gas Dynamics</td>
+      <td>Cranfield</td>
+      <td>USA</td>
+      <td>330.0</td>
+      <td>330.0</td>
+      <td>1</td>
+      <td>2D borehole</td>
+      <td>Yes</td>
+      <td>60</td>
+      <td>5</td>
+      <td>2 boreholes (1 x 14 + 1 x 7)</td>
+      <td>21.0</td>
+      <td>MPT-DAS-1</td>
+    </tr>
+  </tbody>
+</table>
+<p>674 rows × 20 columns</p>
+</div></div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "dimech-env"
+        },
+        kernelOptions: {
+            kernelName: "dimech-env",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'dimech-env'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="myplot2_mpl.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">My plot 2 with matplolib</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
