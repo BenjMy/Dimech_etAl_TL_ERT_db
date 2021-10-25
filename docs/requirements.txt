@@ -14,3 +14,4 @@ qgrid
 jupyter-dash
 ipyleaflet
 sphinx_gallery
+ipykernel
