@@ -21,6 +21,7 @@ release = '0.1.1'
 #
 # needs_sphinx = '1.0'
 
+import guzzle_sphinx_theme
 
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -32,6 +33,7 @@ extensions = [
    'jupyter_sphinx.execute'
 ]
 
+nbsphinx_execute = 'always'
 
 # Produce pages for each class and function
 autosummary_generate = True
@@ -100,6 +102,22 @@ html_theme = 'sphinx_rtd_theme'
 #
 # html_sidebars = {}
 
+html_favicon = 'favicon.svg'
+html_title = project + ' version ' + release
+html_theme_path = guzzle_sphinx_theme.html_theme_path()
+html_theme = 'guzzle_sphinx_theme'
+
+html_theme_options = {
+    'navigation_with_keys': True,
+
+    'project_nav_name': project,
+    'base_url': 'https://nbsphinx.readthedocs.io/en/guzzle-theme/',
+    'globaltoc_depth': 3,
+    #'globaltoc_collapse': False,
+}
+html_sidebars = {
+    '**': ['logo-text.html', 'globaltoc.html', 'searchbox.html']
+}
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
