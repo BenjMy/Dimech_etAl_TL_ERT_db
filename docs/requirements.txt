@@ -1,3 +1,4 @@
+itables
 guzzle_sphinx_theme
 nbsphinx
 jupyter_sphinx

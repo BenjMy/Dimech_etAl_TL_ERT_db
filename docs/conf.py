@@ -30,7 +30,6 @@ import guzzle_sphinx_theme
 extensions = [
     'nbsphinx', # to include jupyter notebook as sphinx doc page
     'sphinx.ext.mathjax',
-    'jupyter_sphinx.executesphinx',
     'sphinx.ext.autosectionlabel'
 ]
 
