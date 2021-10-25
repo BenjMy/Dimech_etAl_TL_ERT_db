@@ -33,6 +33,7 @@ extensions = [
 ]
 
 nbsphinx_execute = 'always'
+nbsphinx_kernel_name = 'Dimech-env'
 
 # Produce pages for each class and function
 autosummary_generate = True
