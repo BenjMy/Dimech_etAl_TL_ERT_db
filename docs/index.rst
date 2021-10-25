@@ -56,7 +56,6 @@ Contents
 --------
 
 .. toctree::
-  :maxdepth: 2
 
    map
    table
