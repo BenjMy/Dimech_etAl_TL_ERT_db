@@ -29,7 +29,7 @@ Explore it on the map!: link_.
 
 
 Contact
--------
+=======
 
 .. warning::
 
@@ -39,7 +39,7 @@ Contact
 
 
 Cite this work
---------------
+==============
 
 Read `our paper in Journal Name <link URL>`_.
 
@@ -63,11 +63,5 @@ Contents
    myplot2_mpl
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
 
