@@ -33,7 +33,7 @@ extensions = [
 ]
 
 nbsphinx_execute = 'auto'
-#nbsphinx_kernel_name = 'Dimech'
+nbsphinx_kernel_name = 'dimech-env'
 nbsphinx_allow_errors = True
 
 # Produce pages for each class and function
