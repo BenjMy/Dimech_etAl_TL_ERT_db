@@ -1,6 +1,8 @@
 itables
+matplotlib
 guzzle_sphinx_theme
 nbsphinx
+jupyter_sphinx
 jupyter_sphinx
 numpy
 chart_studio
