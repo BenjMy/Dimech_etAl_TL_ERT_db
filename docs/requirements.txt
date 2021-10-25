@@ -2,7 +2,8 @@ itables
 matplotlib
 guzzle_sphinx_theme
 nbsphinx
-jupyter_sphinx
+ipywidgets>=7.6
+jupyterlab>=3
 jupyter_sphinx
 numpy
 chart_studio
@@ -10,6 +11,6 @@ plotly
 numpydoc
 pandas
 qgrid
-ipywidgets
+jupyter-dash
 ipyleaflet
 sphinx_gallery

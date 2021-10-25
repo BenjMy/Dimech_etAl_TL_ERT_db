@@ -1,13 +1,11 @@
-# The name of the environment matching the repository name
-name: Dimech_etAl_TL_ERT_db
+name: Dimech-env
 channels:
 - conda-forge
 - defaults
 dependencies:
-- python>=3.7
-- pip
-- numpy
-- pandas
-- qgrid
-- ipywidgets
-- ipyleaflet
+  - python>=3.6
+  - pip
+  - pip:
+    - -r docs/requirements.txt
+    
+    
